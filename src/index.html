@@ -11,13 +11,12 @@
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
-
+    <div id='name'></div>
     <script>
       (async function() {
           const { text } = await( await fetch(`/api/message`)).json();
           document.querySelector('#name').textContent = text;
       }())
-      
       </script>
   </main>
 </body>
